@@ -83,7 +83,7 @@ namespace MyProject.Controllers
             {
                 return NotFound();
             }
-            _dbContext.Categories.Remove(car);
+            _dbContext.Cars.Remove(car);
             await _dbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
