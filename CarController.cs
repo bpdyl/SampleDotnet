@@ -68,6 +68,7 @@ namespace MyProject.Controllers
             carfromdb.CarName = c.CarName;
             carfromdb.Description = c.Description;
             carfromdb.price = c.price;
+            _dbContext.Cars.Update(carfromdb);
             await _dbContext.SaveChangesAsync();
             return RedirecToAction(nameof(Index)); 
         }
